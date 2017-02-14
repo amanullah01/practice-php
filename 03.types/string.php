@@ -9,4 +9,10 @@
   echo "This will expand: \n a newline<br>";
 
   echo 'This is ($var) a varable name. ';
+
+  $age = 12;
+  $name = 'My';
+  echo "<br>";
+  echo $name.' age is '.$age;
+  echo "<br>$name age is $age."
 ?>
