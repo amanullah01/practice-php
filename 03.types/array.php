@@ -143,5 +143,12 @@ ini_set('html_errors', false);
   print_r($ref_arr3);
   print_r($ref_arr1);
 
+  echo "String to Array\n";
+  echo $test_str = "This is aman";
+  echo "\n";
+  print_r($test_str);
+  $test_str = (array)$test_str;
+  print_r($test_str);
+
 
 ?>
