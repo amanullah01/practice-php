@@ -10,6 +10,6 @@
   var_dump(key($obj));
 
   $obj2 = (object) 'Amanullah Aman';
-  //echo $obj2->scalar;  // outputs 'ciao'
   print_r($obj2);
+  echo $obj2->scalar;  // outputs 'ciao'
 ?>
