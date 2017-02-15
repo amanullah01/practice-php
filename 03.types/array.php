@@ -115,5 +115,33 @@ ini_set('html_errors', false);
   $fq = [1=>'January', 'February', 'March'];
   print_r($fq);
 
+  $te = [
+    'Hello',
+    5 =>'Number 5',
+    'It will be 6',
+    3 => 'Defined 3',
+    'What it will be?'
+  ];
+
+  print_r($te);
+
+  echo "Copy by referance\n";
+
+  $ref_arr1 = [1,2];
+  echo "Array1: \n";
+  print_r($ref_arr1);
+  $ref_arr2 = $ref_arr1;
+  $ref_arr2[] = 3;
+  echo "Array1: \n";
+  print_r($ref_arr1);
+  echo "Array2: \n";
+  print_r($ref_arr2);
+
+  $ref_arr3 = &$ref_arr1;
+  $ref_arr3[] = 10;
+  echo "Array3 and Array 1\n";
+  print_r($ref_arr3);
+  print_r($ref_arr1);
+
 
 ?>
