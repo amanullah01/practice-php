@@ -1,4 +1,8 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', true);
+ini_set('html_errors', false);
+
   $family = [
     "H" => "Aman",
     "W" => "MZ",
@@ -44,5 +48,53 @@
   // on PHP 5.4
   var_dump(getArray());
   echo $secondElement = getArray()[1];
+
+  echo "<br>*****Add and remove data from an array";
+
+  $array6 = [5 => 10, 12 => 20];
+  var_dump($array6);
+
+  $array6[] = 30 ; // add 30 in array6
+  var_dump($array6);
+  $array6['20'] = 40; //add 40 in array 6
+  var_dump($array6);
+  unset($array6['5']); //remove index 5 fromm array6
+  var_dump($array6);
+  unset($array6); //remove all data from array 6
+  var_dump($array6);
+
+  echo "<br>****Re-indexd Array*********";
+  $array7 = [1,2,3,4,5,6];
+  print_r($array7);
+  foreach($array7 as $index=>$value){
+    unset($array7[$index]);
+  }
+  echo "<br>After removing array indexes";
+  print_r($array7);
+  echo "Add new element in array7<br>";
+  $array7[] = 8;
+  $array7[] = 9;
+  print_r($array7);
+  echo "Re index array.<br>";
+  $array7 = array_values($array7);
+  print_r($array7);
+
+  //bad practice.
+  $foo[bar] = 'enemy';
+  echo $foo[bar];
+
+  echo "\nArrays do and dont \n";
+
+  $array8 = array(1, 2);
+  print_r($array8);
+  $count = count($array8);
+  for($i = 0; $i < $count; $i++){
+    echo "\n Checking $i \n";
+    echo "Bad:".$array8['$i']."\n";
+    echo "Good:".$array8[$i]."\n";
+    echo "Bad:{$array8['$i']}\n";
+    echo "Good: {$array8[$i]}\n";
+  }
+
 
 ?>
