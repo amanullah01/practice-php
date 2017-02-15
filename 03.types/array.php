@@ -96,5 +96,24 @@ ini_set('html_errors', false);
     echo "Good: {$array8[$i]}\n";
   }
 
+  echo "Example #9 Collection\n";
+
+  $colors = array('red', 'blue', 'green', 'yellow');
+
+  foreach ($colors as $color) {
+      echo "Do you like $color?\n";
+  }
+
+  foreach ($colors as &$color) {
+      $color = strtoupper($color);
+  }
+  unset($color);
+  print_r($colors);
+
+  echo "Example #11 One-based index\n";
+
+  $fq = [1=>'January', 'February', 'March'];
+  print_r($fq);
+
 
 ?>
