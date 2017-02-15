@@ -15,4 +15,29 @@
   echo __NAMESPACE__	;
   echo "<br>";
   ClassName::class;
+
+  class Aman{
+    function name(){
+      echo "Function name is : [ __FUNCTION__ ]:  ".__FUNCTION__;
+    }
+    function surname(){
+      echo "<br>";
+      echo "Method name is : [ __METHOD__ ]: ".__METHOD__;
+    }
+    function classname(){
+      echo "<br>";
+      echo "Class name is : [ __CLASS__ ]: ".__CLASS__;
+    }
+
+    function calledAmethod(){
+      echo "<br> This is Amanullah Aman. Author is this class";
+    }
+  }
+
+  $obj = new Aman ;
+  $obj->name();
+  $obj->surname();
+  $obj->classname();
+
+  Aman::calledAmethod();
 ?>
