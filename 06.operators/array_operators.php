@@ -33,4 +33,20 @@
   var_dump($arr1 == $arr2);
   var_dump($arr1 === $arr2);
 
+  echo "<br>************** Array Union will be like that **********************";
+  $ab = [
+    'a'=> 'Apple',
+    'b'=> 'Banana'
+  ];
+
+  $bc = [
+    'a'=> 'Guava',
+    'b'=> 'Strawberry',
+    'c'=>'Cherry'
+  ];
+
+  print_r(array_unique(array_merge($ab,$bc)));
+  echo "<br>###################################<br>";
+  print_r (array_unique(array_merge($ab,$bc)));
+
 ?>
