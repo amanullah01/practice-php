@@ -1,4 +1,5 @@
 <?php
+$time_start = microtime(true);
   echo "<h1>While Loop</h1>";
 
   $i = 1;
@@ -21,5 +22,8 @@
     $j++;
   endwhile;
   echo "Total Even Numbers:". ($count-1)."<br>";
-  echo "Total Sum: $sum";
+  echo "Total Sum: $sum <br>";
+
+
+  echo 'Total execution time in seconds: ' . (microtime(true) - $time_start)/60;
 ?>
