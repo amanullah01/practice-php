@@ -31,4 +31,17 @@
   foreach ($arr2 as $key => $value) {
       echo "Key: $key; Value: $value<br />\n";
   }
+
+  echo "<br>******* Multidimensional Array**************</br>";
+  $a = array();
+  $a[0][0] = "a";
+  $a[0][1] = "m";
+  $a[1][0] = "a";
+  $a[1][1] = "n";
+
+  foreach ($a as $v1) {
+      foreach ($v1 as $v2) {
+          echo "$v2\n";
+      }
+  }
 ?>
