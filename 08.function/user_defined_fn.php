@@ -38,5 +38,14 @@
   motherFn();
   childfn(); // it will work here now. because mother function called before call child function.
 
+  echo "<h2>Example #4 Recursive functions</h2>";
+  function recursion($a){
+    if($a<20){
+      echo $a."<br>";
+      recursion($a+2);
+    }
+  }
+  recursion(1);
+
 
 ?>
