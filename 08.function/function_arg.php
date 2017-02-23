@@ -27,4 +27,12 @@
   echo makecoffee();
   echo makecoffee(null);
   echo makecoffee('epresso');
+
+  echo "<h2>Example #4 Using non-scalar types as default values</h2>";
+  function makeCoffee2($type = array('cappuccino'), $coffeeMaker = null){
+    $device = is_null($coffeeMaker) ? 'Hands' : $coffeeMaker;
+    return "Making a cup of ".join(",",$type)." with ".$device.".<br>";
+  }
+  echo makeCoffee2();
+  echo makeCoffee2(array('cappuccino','epresso'),"Blander");
 ?>
