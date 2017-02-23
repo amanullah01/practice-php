@@ -18,4 +18,13 @@
   $string = "This is passing parameters";
   fnByRef($string);
   echo $string;
+
+  echo "<h2>Example #3 Use of default parameters in functions</h2>";
+
+  function makecoffee($type = "cappuccino"){
+      return "Making a cup of $type. <br>";
+  }
+  echo makecoffee();
+  echo makecoffee(null);
+  echo makecoffee('epresso');
 ?>
