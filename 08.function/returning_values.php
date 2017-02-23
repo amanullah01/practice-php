@@ -34,4 +34,7 @@
 
   var_dump(getC());
   */
+  echo "main dir: ".__DIR__."<br>";
+  echo "main root: ".$_SERVER['DOCUMENT_ROOT']."<br>";
+
 ?>
