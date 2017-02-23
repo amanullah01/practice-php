@@ -16,4 +16,22 @@
   var_dump(return_multiple());
   list($z,$o,$t,$th) = return_multiple();
   echo $z;
+
+  //below example work only php 7 server
+  /*echo "<h2>Example #4 Basic return type declaration</h2>";
+  function sum($a, $b): float {
+      return $a + $b;
+  }
+
+  // Note that a float will be returned.
+  var_dump(sum(1, 2)); */
+
+  /*class C {}
+
+  function getC(): C {
+      return new C;
+  }
+
+  var_dump(getC());
+  */
 ?>
