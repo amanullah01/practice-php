@@ -25,5 +25,18 @@
     echo "Hello this is bar()<br>";
   }
 
+  echo "<h2>Example #3 Functions within functions</h2>";
+
+  function motherFn(){
+    echo "This is mother function()<br>";
+    function childfn(){
+      echo "This is child function().<br>";
+    }
+  }
+
+  //childfn(); //it will not work here.
+  motherFn();
+  childfn(); // it will work here now. because mother function called before call child function.
+
 
 ?>
