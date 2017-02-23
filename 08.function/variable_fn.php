@@ -13,4 +13,22 @@
   $fn1();
   $fn2 = 'bar';
   $fn2('Aman');
+
+  echo "***************************<br>";
+  echo "<h2>Example #2 Variable method example</h2>";
+
+  class Foo{
+    function variable(){
+      echo "This is variable function. <br>";
+      $name = 'bar';
+      $this->$name();
+    }
+    function bar(){
+      echo "This is bar <br>";
+    }
+  }
+
+  $f = new Foo ;
+  $f_v = 'variable';
+  $f->$f_v();
 ?>
