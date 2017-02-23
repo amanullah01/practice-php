@@ -91,4 +91,21 @@
 
   fnInter(new interExtends);
   //fnInter(new notExtends); // it will not work.  Becaus this class doesn't implements Inter Interface;
+
+  echo "<h2>Example #10 Strict typing</h2>";
+  /*declare(strict_types=1);
+
+  function sum(int $a, int $b) {
+    return $a + $b;
+  }
+
+  var_dump(sum(1, 2));
+  var_dump(sum(1.5, 2.5));*/
+
+  /*function sum1(int $a, int $b) {
+    return $a + $b;
+  }
+
+  var_dump(sum1(1, 2));
+  var_dump(sum1(1.5, 2.5)); */
 ?>
