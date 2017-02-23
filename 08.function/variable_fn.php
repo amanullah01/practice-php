@@ -31,4 +31,17 @@
   $f = new Foo ;
   $f_v = 'variable';
   $f->$f_v();
+
+  echo "<h2>Example #3 Variable method example with static properties</h2>";
+  class FooState
+  {
+      static $variable = 'static property<br>';
+      static function Variable()
+      {
+          echo 'Method Variable called<br>';
+      }
+  }
+  echo FooState::$variable;
+  $variable = "Variable";
+  FooState::$variable();
 ?>
