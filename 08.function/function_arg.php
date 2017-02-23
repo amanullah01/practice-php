@@ -9,4 +9,13 @@
 
   $arr1 = [10,20];
   arrayFn($arr1);
+
+  echo "<h2>Passing function parameters by Reference</h2>";
+
+  function fnByRef(&$string){
+    $string.=' And this is some extra.<br>';
+  }
+  $string = "This is passing parameters";
+  fnByRef($string);
+  echo $string;
 ?>
