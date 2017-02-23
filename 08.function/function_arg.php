@@ -66,4 +66,29 @@
   fnCallClass(new FatherClass);
   fnCallClass(new MotherClass);
   //fnCallClass(new UncleClass); // it will not work . because UncleClass doesn't extends father class.
+
+  echo "<h2>Example #8 Basic interface type declaration</h2>";
+
+  interface Inter{
+    public function fnInter();
+  }
+
+  class interExtends implements Inter{
+    public function fnInter(){
+      echo "This is extended class function.<br>";
+    }
+  }
+
+  class notExtends{
+    public function fnInter(){
+      echo "Not extended<br>";
+    }
+  }
+
+  function fnInter(Inter $i){
+    echo get_class($i)."<br>";
+  }
+
+  fnInter(new interExtends);
+  //fnInter(new notExtends); // it will not work.  Becaus this class doesn't implements Inter Interface;
 ?>
