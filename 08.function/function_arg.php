@@ -35,4 +35,35 @@
   }
   echo makeCoffee2();
   echo makeCoffee2(array('cappuccino','epresso'),"Blander");
+
+
+  $dem_ar = [
+    1 => 'Mr',
+    "1" => 'Khan',
+    true => 'Probably u dont know this'
+  ];
+  print_r($dem_ar);
+
+  echo "<h2>Example #7 Basic class type declaration</h2>";
+  class FatherClass{
+
+  }
+
+  // here motherclass extends fatherclass.
+  class MotherClass extends FatherClass{
+
+  }
+
+  //uncle class doesn't extends father class.
+  Class UncleClass{
+
+  }
+
+  function fnCallClass(FatherClass $fc){
+    echo get_class($fc)."<br>";
+  }
+
+  fnCallClass(new FatherClass);
+  fnCallClass(new MotherClass);
+  //fnCallClass(new UncleClass); // it will not work . because UncleClass doesn't extends father class.
 ?>
