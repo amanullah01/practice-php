@@ -28,4 +28,26 @@
   };
   $example();
 
-  //
+  $example = function() use($message){
+    var_dump($message);
+  };
+
+  $example();
+
+  $message = 'World';
+  $example();
+
+  //inherited by references
+  $message = 'Hello';
+  $example = function() use(&$message){
+    var_dump($message);
+  };
+  $example();
+
+  $message = 'World';
+  $example();
+
+  $example = function($arg) use($message){
+    var_dump($arg . " ". $message);
+  };
+  $example('Hello');
