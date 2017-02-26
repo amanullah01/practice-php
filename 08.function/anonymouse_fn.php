@@ -67,3 +67,16 @@
   foreach($fruites as $key => $value){
     echo "$key has : $value <br>";
   }
+
+  echo "<h2>Example #6 Attempting to use $this inside a static anonymous function</h2>";
+  class Foo
+  {
+      function __construct()
+      {
+          $func = static function() {
+              var_dump($this);
+          };
+          $func();
+      }
+  };
+  new Foo();
