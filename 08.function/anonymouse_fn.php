@@ -51,3 +51,19 @@
     var_dump($arg . " ". $message);
   };
   $example('Hello');
+
+  echo "<br>********************array_walk()*************<br>";
+  $fruites = ['Apple', 'Orrange', 'Banana', 'Pine-apple', 'JackFruit', 'Mango'];
+  print_r($fruites);
+
+  function myFunc($value, $key){
+    echo "$key has : $value <br>";
+  }
+
+  echo "<h2>Using array walk</h2>";
+  array_walk($fruites, 'myFunc');
+
+  echo "<h2>Using foreach</h2>";
+  foreach($fruites as $key => $value){
+    echo "$key has : $value <br>";
+  }
