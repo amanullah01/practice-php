@@ -78,4 +78,16 @@
   $d_obj = new DateTime();
   var_dump($d_obj);
   var_dump($d_obj->format('d'));
+
+  echo "<h2>Example #7 Property access vs. method call</h2>";
+  class Foo{
+    public $bar = "This is property";
+
+    public function bar(){
+      return "<br>This is Method()<br>";
+    }
+  }
+  $p_m_obj = new Foo ;
+  echo $p_m_obj->bar;
+  echo $p_m_obj->bar();
 ?>
