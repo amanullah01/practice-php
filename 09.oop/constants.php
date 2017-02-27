@@ -22,5 +22,15 @@ namespace Foo{
 
     }
     echo Bar::class;
+
+    echo "<h2>Example #4 Constant expression example</h2>";
+    
+    const ONE = 1;
+    class ConstExpression{
+        const TWO = ONE * 2;
+        const THREE = self::TWO + ONE ;
+        const ANS = "Result is : ".self::THREE;
+    }
+    echo ConstExpression::ANS;
 }
 ?>
