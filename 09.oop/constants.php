@@ -24,7 +24,7 @@ namespace Foo{
     echo Bar::class;
 
     echo "<h2>Example #4 Constant expression example</h2>";
-    
+
     const ONE = 1;
     class ConstExpression{
         const TWO = ONE * 2;
@@ -32,5 +32,14 @@ namespace Foo{
         const ANS = "Result is : ".self::THREE;
     }
     echo ConstExpression::ANS;
+
+    echo "<h2>Example #5 Class constant visibility modifiers</h2>";
+    /*class ConstModifier {
+        // As of PHP 7.1.0
+    public const BAR = 'bar';
+    private const BAZ = 'baz';
+    }
+    echo ConstModifier::BAR, PHP_EOL;
+    echo ConstModifier::BAZ, PHP_EOL; */
 }
 ?>
