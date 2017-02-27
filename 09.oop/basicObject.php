@@ -36,4 +36,17 @@
   $obj3 = new B;
   $obj3->bar();
   B::bar();
+
+  echo "<h2>Example #4 Object Assignment</h2>";
+  $instance = new SimpleClass ;
+  $assign = $instance ;
+  $reference = &$instance ;
+
+  $instance->var = "This is a varialbe which is also assign in assign variable";
+  $instance = null ;
+
+  var_dump($instance);
+  var_dump($reference);
+  var_dump($assign);
+
 ?>
