@@ -71,4 +71,11 @@
 
   $c_obj4 = Child::getNew();
   var_dump($c_obj4 instanceof Child);
+
+  echo "<h2>Example #6 Access member of newly created object</h2>";
+  echo (new DateTime())->format('Y');
+
+  $d_obj = new DateTime();
+  var_dump($d_obj);
+  var_dump($d_obj->format('d'));
 ?>
