@@ -41,5 +41,12 @@ namespace Foo{
     }
     echo ConstModifier::BAR, PHP_EOL;
     echo ConstModifier::BAZ, PHP_EOL; */
+
+    echo "<h2>Total second per day</h2>";
+    class MyTimer{
+        const sec_day = 24 * 60 * 60 ;
+    }
+
+    echo "Second per day: ".MyTimer::sec_day ;
 }
 ?>
