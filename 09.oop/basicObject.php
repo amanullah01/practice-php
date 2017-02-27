@@ -49,4 +49,26 @@
   var_dump($reference);
   var_dump($assign);
 
+  echo "<h2>Example #5 Creating new objects</h2>";
+
+  class Test{
+    static public function getNew(){
+      return new static ;
+    }
+  }
+
+  class Child extends Test{
+
+  }
+
+  $c_obj = new Test();
+  $c_obj2 = new $c_obj ;
+  var_dump($c_obj === $c_obj2); // return false... because this is different object.
+  var_dump($c_obj !== $c_obj2); // return true.. because this is different object.
+
+  $c_obj3 = Test::getNew();
+  var_dump($c_obj3 instanceof Test);
+
+  $c_obj4 = Child::getNew();
+  var_dump($c_obj4 instanceof Child);
 ?>
