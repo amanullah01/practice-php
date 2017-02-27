@@ -109,4 +109,17 @@
   $func = $obj->bar;
   echo $func(), PHP_EOL;
 
+  echo "<h2>Example #9 Simple Class Inheritance</h2>";
+
+  class ExtendedClass extends SimpleClass{
+    function simpleMethod(){
+      echo $this->var;
+      echo "This is child class method.<br>";
+      parent::simpleMethod();
+    }
+  }
+
+  $in_obj = new ExtendedClass ;
+  $in_obj->simpleMethod();
+
 ?>
