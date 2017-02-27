@@ -90,4 +90,23 @@
   $p_m_obj = new Foo ;
   echo $p_m_obj->bar;
   echo $p_m_obj->bar();
+
+  echo "<h2>Example #8 Calling an anonymous function stored in a property</h2>";
+  class Foooo
+  {
+      public $bar;
+
+      public function __construct() {
+          $this->bar = function() {
+              return 42;
+          };
+      }
+  }
+
+  $obj = new Foooo();
+
+  // as of PHP 5.3.0:
+  $func = $obj->bar;
+  echo $func(), PHP_EOL;
+
 ?>
