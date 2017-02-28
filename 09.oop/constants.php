@@ -17,7 +17,7 @@ namespace Foo{
     echo "<br>";
     MyConstClass::showConstant();
 
-    echo "<h2>Example #3 Namespaced ::class example</h2>";
+    echo "<h2>Example #3 Name spaced ::class example</h2>";
     class Bar{
 
     }
