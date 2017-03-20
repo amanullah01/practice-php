@@ -1,7 +1,7 @@
 <?php
   abstract class AbstractClass{
-    protected abstract function getValue();
-    protected abstract function prefixValue($prefix);
+    abstract protected function getValue();
+    abstract protected function prefixValue($prefix);
 
     public function printValue(){
        print_r($this->getValue());
@@ -38,4 +38,21 @@
   $obj2->printValue();
   $obj2->prefixValue('Amanullah Aman');
 
+
+  echo "<br>*****************<br>";
+
+  abstract class Test{
+    abstract protected function name($prefix,$name);
+    function __construct(){
+      echo "hello<br>";
+    }
+  }
+  class foo extends Test{
+    public function name($prefix,$name,$sep='.'){
+      echo $prefix.$sep.$name;
+    }
+  }
+
+  $obj3 = new foo;
+  $obj3->name('Mr','Amanullah');
 ?>
