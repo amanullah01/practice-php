@@ -58,4 +58,6 @@
   $all->setAuthor('Amanullah Aman', 'Dhaka, Bangladesh');
   $all->setPublisher('MZ Ahmed', 'Khulna, Bangladesh');
   echo $all->getAllInfo();
+
+  var_dump($all->getAllInfo());
 ?>
