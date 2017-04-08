@@ -1,4 +1,5 @@
 <?php
+  $title ='Abstract Class';
   require "../header.php";
   abstract /**
    *
@@ -32,6 +33,10 @@
     public function getTax($tax){
       return '<br>BDT '.((float)$tax*.15);
     }
+
+    public function testM(){
+      echo '<br>This is test method.';
+    }
   }
 
   $c1 = new ClassName1();
@@ -39,6 +44,7 @@
   echo $c1->getPrint();
   echo $c1->getPrefix('Aman');
   echo $c1->getTax(200);
+  $c1->testM();
 
 
 require "../footer.php";
