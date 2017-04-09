@@ -1,5 +1,5 @@
 <?php
-$title = 'Polymorphism | CAR';
+$title = 'Polymorphism | Shape';
 require "../header.php";
 Interface Shape{
   public function calcArea();
