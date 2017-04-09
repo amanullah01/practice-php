@@ -50,11 +50,11 @@
       color: #1abc9c !important;
   }
 
-  footer{
+  /*footer{
     position: absolute;
     width: 100%;
     bottom: 0;
-  }
+  }*/
   </style>
 </head>
 <body>
