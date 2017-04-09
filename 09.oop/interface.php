@@ -3,20 +3,23 @@
   require "../header.php";
   Interface Car{
     public function setInfo($carName,$modelName);
-    public function getInfo();
+    public function getCarInfo();
   }
 
-  class MiniCar implements Car{
-    private $carName;
-    private $modelName;
+  Interface Home{
+    public function setHomeInfo($homeName,$location);
+    public function getHomeInfo();
+  }
+
+  class Property implements Car,Home{
+    private $home=[];
     private $car=[];
+
     public function setInfo($carName,$modelName){
-      // $this->carName = $carName;
-      // $this->modelName = $modelName;
       $this->car[$carName] = $modelName;
     }
 
-    public function getInfo(){
+    public function getCarInfo(){
       //return json_encode($this->car);
       $str = '';
       foreach ($this->car as $key => $value) {
@@ -24,15 +27,36 @@
       }
       return $str;
     }
+
+
+    //HOme information
+    public function setHomeInfo($homeName,$location){
+      $this->home[$homeName] = $location;
+    }
+    public function getHomeInfo(){
+      $hm = '';
+      foreach ($this->home as $home1 => $address) {
+        $hm.='Home Name: '.$home1.', Location: '.$address.'<br>';
+      }
+      return $hm;
+    }
   }
 
-  $car = new MiniCar;
-  $car->setInfo('Toyota', 'Personal');
-  $car->setInfo('Corolla', 'X');
-  $car->setInfo('Audi', 'A8');
-  //echo "<pre>";
-  //print_r($car->getInfo());
-  echo $car->getInfo();
-  //echo $car->getInfo();
+  $property = new Property;
+  $property->setInfo('Toyota', 'Personal');
+  $property->setInfo('Corolla', 'X');
+  $property->setInfo('Audi', 'A8');
+
+  echo $property->getCarInfo();
+
+  $h = new Property;
+
+  $h->setHomeInfo('MZ House', 'Dhaka, Bangladesh');
+  $h->setHomeInfo('AMN Villa', 'Nikunja, Bangladesh');
+  $h->setHomeInfo('Khan Property', 'Gulshan, Bangladesh');
+
+  echo $h->getHomeInfo();
+
+
   require "../footer.php";
 ?>
